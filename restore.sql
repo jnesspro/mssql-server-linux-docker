@@ -1,0 +1,1 @@
+RESTORE DATABASE ArtMan FROM DISK = '/var/opt/mssql/backup/artman.bak' WITH FILE = 1, NOUNLOAD, STATS = 10, MOVE 'ARTMAN' TO '/var/opt/mssql/data/ArtMan.mdf', MOVE 'ARTMAN_log' TO '/var/opt/mssql/data/ArtMan.ldf', NOUNLOAD,  STATS = 10
