@@ -6,7 +6,7 @@ EXPOSE 1433
 ENV DEBIAN_FRONTEND noninteractive
 ENV ACCEPT_EULA Y
 VOLUME /var/opt/mssql/backup
-ADD restore.sql /restore.sql
+VOLUME /sql
 RUN apt-get update && apt-get install -y curl apt-transport-https debconf-utils apt-utils \
     && curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - \
     && curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | tee /etc/apt/sources.list.d/msprod.list \
