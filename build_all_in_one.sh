@@ -5,6 +5,7 @@ docker build . -t jnesspro/mssql-server-linux &&
 docker run -p 1433:1433 -e 'SA_PASSWORD=@QAZxsw2' \
   -v /Users/ness/Yandex.Disk.localized/backup/artmandb:/var/opt/mssql/backup \
   -v /Users/ness/Projects/docker/mssql-server-linux-docker/sql:/sql \
-  --name voxmedb -d jnesspro/mssql-server-linux &&
+  --name voxmedb -d --rm jnesspro/mssql-server-linux &&
 sleep 15 &&
-docker exec -i voxmedb /bin/bash < restore_all.sh
+docker exec -i voxmedb /bin/bash < restore_artman.sh &&
+docker exec -i voxmedb /bin/bash < restore_webest.sh
