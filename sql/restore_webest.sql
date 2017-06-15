@@ -1,0 +1,16 @@
+CREATE DATABASE webest
+GO
+
+CREATE LOGIN webest WITH PASSWORD = 'webest', DEFAULT_DATABASE=[webest], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+GO
+
+USE webest
+CREATE USER webest FOR LOGIN webest
+GO
+
+CREATE DATABASE webestnew
+GO
+
+USE webestnew
+CREATE USER webest FOR LOGIN webest
+GO
