@@ -16,7 +16,6 @@ RUN apt-get update && apt-get install -y curl apt-transport-https debconf-utils 
     && ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd \
     && ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp \
     && locale-gen en_US en_US.UTF-8 \
-    && locale-gen it_IT it_IT.UTF-8 \
     && dpkg-reconfigure locales \
     && apt-get autoremove -y && apt-get clean \
     && rm -rf /var/cache/* && rm -rf /var/lib/apt/lists/*

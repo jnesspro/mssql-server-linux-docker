@@ -7,10 +7,3 @@ GO
 USE webest
 CREATE USER webest FOR LOGIN webest
 GO
-
-CREATE DATABASE webestnew
-GO
-
-USE webestnew
-CREATE USER webest FOR LOGIN webest
-GO
